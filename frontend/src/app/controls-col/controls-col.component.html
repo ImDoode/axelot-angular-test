@@ -1,0 +1,18 @@
+<ng-container *ngFor="let control of controlsList">
+  <p [ngSwitch]="control.inputType">
+    <mat-form-field *ngSwitchCase="'String'">
+      <mat-label>{{ control.text }}</mat-label>  
+      <ng-container >
+        <input  type="text" matInput [formControlName]="control.text" [name]="control.text" />
+      </ng-container>
+    </mat-form-field>
+    <mat-form-field *ngSwitchCase="'Int'">
+      <mat-label>{{ control.text }}</mat-label>  
+        <ng-container >
+          <input *ngSwitchCase="'Int'" type="number" matInput [formControlName]="control.text" [name]="control.text" />
+        </ng-container>
+      </mat-form-field>
+    <mat-checkbox *ngSwitchCase="'Boolean'" [formControlName]="control.text" [name]="control.text">{{ control.text }}</mat-checkbox>
+  </p>
+</ng-container>
+

@@ -1,0 +1,42 @@
+{
+  "GetForm": {
+	  "column1": {
+	    "inputs": [
+	    ]
+	  },
+	  "column2": {
+	    "inputs": [
+	      {
+	        "id": "3",
+	        "inputType": "Int",
+	        "text": "fingersCount"
+	      },
+	      {
+	        "id": "4",
+	        "inputType": "Boolean",
+	        "text": "haveThreeArms"
+	      }
+	    ]
+	  }
+	},
+  "GetData": {
+	  "data": [
+	    {
+	      "id": "1",
+	      "value": "Lorem"
+	    },
+	    {
+	      "id": "2",
+	      "value": "18"
+	    },
+	    {
+	      "id": "3",
+	      "value": "10"
+	    },
+	    {
+	      "id": "6",
+	      "value": "false"
+	    }
+	  ]
+	}
+}

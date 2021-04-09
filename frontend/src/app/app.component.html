@@ -1,0 +1,22 @@
+<div class="nav__container">
+  <nav class="nav">
+    <button class="nav__button" mat-raised-button color="primary" (click)="getFormData()">Обновить данные</button>
+    <button class="nav__button" mat-raised-button color="primary" (click)="getFormStructure()">Обновить форму</button>
+  </nav>
+</div>
+<mat-card class="wrap">
+  <mat-card-content>
+    <form class="form" [formGroup]="dynamicForm" *ngIf="!!formStructure">
+      <div class="form__col">
+        <controls-col [controlsList]="formStructure.column1.inputs"></controls-col>
+      </div>
+      <div class="form__col">
+        <controls-col [controlsList]="formStructure.column2.inputs"></controls-col>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+<ng-container *ngIf="!!formStructure">
+  {{ dynamicForm.value | json }}
+</ng-container>
